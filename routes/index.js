@@ -4,7 +4,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res) {
-    res.render('index', { title: 'Nosso App Node AZURE' });
+    res.render('index', { title: 'Alterei essa merda' });
 });
 
 module.exports = router;
