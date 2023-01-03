@@ -1,24 +1,17 @@
 
 'use strict';
+import express from "express"
 import find from "./db_scripts/sql_scripts.js"
 
-import express from "express"
-
 const app = express()
-
 app.use(express.json())
-
-app.get("/dados", async (req, res) => {
-
-    const data = await find()
-
+app.get("/dados", async (req, res) => { const data = await find()
     res.send(data)
-
-})
-
-
+}
 
 app.listen(1337, () => console.log("Rodando"))
+
+
 //var debug = require('debug')('my express app');
 //var express = require('express');
 //var path = require('path');
